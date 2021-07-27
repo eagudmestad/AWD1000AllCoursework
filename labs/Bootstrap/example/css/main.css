@@ -1,0 +1,13 @@
+.jumbotron.featured-hat {
+  background-image: url('/images/garth-brooks.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+.jumbotron-title {
+  text-shadow: white 2px 2px 0;
+  font-weight: bolder;
+}
+.jumbotron-subtitle {
+  text-shadow: white 2px 2px 0;
+}

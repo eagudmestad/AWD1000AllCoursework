@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Account</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="/js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form id="register-form" action="/auth/register" method="post">
+        <h1>Register Account</h1>
+        <div>
+          <label for="email" class="form-label">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="john.doe@example.com"
+            class="form-control"
+            autocomplete="email"
+          />
+        </div>
+        <div>
+          <label for="email-confirm" class="form-label">Confirm Email</label>
+          <input
+            id="email-confirm"
+            name="email-confirm"
+            type="email"
+            placeholder=""
+            class="form-control"
+            autocomplete="email"
+          />
+        </div>
+        <div>
+          <label for="password-new" class="form-label">Password</label>
+          <input
+            id="password-new"
+            name="password-new"
+            type="password"
+            class="form-control"
+            autocomplete="new-password"
+          />
+        </div>
+        <div>
+          <label for="password-confirm" class="form-label">Confirm Password</label>
+          <input
+            id="password-confirm"
+            name="password-confirm"
+            type="password"
+            class="form-control"
+            autocomplete="new-password"
+          />
+        </div>
+        <div>
+          <label for="phone-number" class="form-label">Phone Number</label>
+          <input
+            id="phone-number"
+            name="phone-number"
+            type="tel"
+            placeholder="1-555-123-5678"
+            class="form-control"
+            autocomplete="tel"
+          />
+        </div>
+        <fieldset class="border border-dark p-3">
+          <legend class="float-none w-auto">Name</legend>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="given-name" class="form-label">Given Name</label>
+              <input
+                id="given-name"
+                name="given-name"
+                type="text"
+                placeholder="John"
+                class="form-control"
+                autocomplete="given-name"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="family-name" class="form-label">Family Name</label>
+              <input
+                id="family-name"
+                name="family-name"
+                type="text"
+                placeholder="Doe"
+                class="form-control"
+                autocomplete="family-name"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="nickname" class="form-label">Nickname</label>
+            <input id="nickname" name="nickname" type="text" class="form-control" autocomplete="nickname" />
+          </div>
+        </fieldset>
+        <div class="p-3">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

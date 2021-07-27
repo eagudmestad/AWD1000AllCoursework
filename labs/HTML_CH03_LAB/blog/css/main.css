@@ -1,0 +1,48 @@
+html {
+  font: 100% sans-serif, Arial;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+
+header {
+  background-color: #0C9927;
+  color: white;
+  padding: 1em;
+}
+header a {
+  color: white;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #0C9927;
+  color: white;
+  padding: 1em;
+}
+footer a {
+  color: white;
+}
+
+/* MAIN */
+
+main {
+  padding: 1em;
+}
+main article time {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* ASIDE */
+
+aside {
+  background-color: #E65069;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "awd1000_base_lab_and_homework",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "scripts": {
+    "eslint": "npx eslint",
+    "stylelint": "npx stylelint '**/*.css'",
+    "html-validate": "npx html-validate '**/*.html'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-document-write": "^1.0.0",
+    "eslint-plugin-import": "^2.23.4",
+    "html-validate": "^4.14.0",
+    "prettier": "^2.3.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
+  }
+}
