@@ -1,0 +1,65 @@
+/************
+STYLES FOR MOBILE FIRST
+*************/
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li{
+    border:3px outset black;
+    background-color:deepskyblue;
+    padding:1em;
+}
+
+a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside{
+    order:2;
+}
+
+header{
+    order:1;
+}
+
+main{
+    order:3;
+    flex-grow: 1;
+}
+
+footer{
+    order:4;
+}
+
+/************
+STYLES FOR 600px width or more (tablet portrait)
+*************/
+@media screen and (min-width:600px){
+
+    /* CSS RULES GO HERE */
+    body{
+        background-color: dimgray;
+    }
+
+    main{
+        order:2;
+    }
+
+    aside{
+        order:3;
+    }
+    
+}
