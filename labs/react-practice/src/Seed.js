@@ -30,43 +30,53 @@ function Seed() {
         const seedCarData = [{
             "make": "Nissan",
             "model": "Sentra",
-            "year": 1992
+            "year": 1992,
+            "color": "red",
         }, {
             "make": "Toyota",
             "model": "Celica",
-            "year": 1983
+            "year": 1983,
+            "color": "green",
         }, {
             "make": "Mitsubishi",
             "model": "Mirage",
-            "year": 1994
+            "year": 1994,
+            "color": "red",
         }, {
             "make": "Volvo",
             "model": "V90",
-            "year": 1997
+            "year": 1997,
+            "color": "green",
         }, {
             "make": "GMC",
             "model": "Envoy XUV",
-            "year": 2005
+            "year": 2005,
+            "color": "blue",
         }, {
             "make": "Dodge",
             "model": "Ram 1500",
-            "year": 2000
+            "year": 2000,
+            "color": "black",
         }, {
             "make": "Dodge",
             "model": "Ram 2500",
-            "year": 1997
+            "year": 1997,
+            "color": "blue",
         }, {
             "make": "Ford",
             "model": "E-Series",
-            "year": 1987
+            "year": 1987,
+            "color": "black",
         }, {
             "make": "Subaru",
             "model": "Alcyone SVX",
-            "year": 1995
+            "year": 1995,
+            "color": "blue",
         }, {
             "make": "Toyota",
             "model": "Yaris",
-            "year": 2012
+            "year": 2012,
+            "color": "black",
         }];
         setAllCars(seedCarData);
         
@@ -80,6 +90,21 @@ function Seed() {
 
        saveCars(newAllCars);
     }
+
+    function modifyCar(carIndex, updatedCar){
+        // const carToUpdate = searchResults[carIndex];
+        // console.log(updatedCar, carToUpdate);
+    //    setAllCars(allCars.map(car => {
+    //        return car.make === updatedCar.make && car.model === updatedCar.model ? updatedCar : car;
+    //    }));
+        const newAllCars = _.map(allCars, (car, index) => index === carIndex ? { ...car, ...updatedCar } : car);
+        const newSearchResults = _.map(searchResults, (car, index) => index === carIndex ? { ...car, ...updatedCar } : car);
+        setAllCars(newAllCars);
+        setSearchResults(newSearchResults);
+        saveCars(newAllCars);
+    }
+
+   
 
     //local storage save
     function saveCars(allCars){
@@ -164,16 +189,15 @@ function Seed() {
                     <button type="submit" className="btn btn-primary" onClick={searchCars}>Search</button>
                 </div>
             </form>
-            <AddCar addCar={addCar}/>
+            <AddCar addCar={addCar} />
             <div className="row">
                 {!allCars && <button className="btn btn-lg btn-warning" onClick={resetCars}>Save Seed Data to Local Storage</button>}
                 {searchResults && searchResults.map((car, index) => {
                     return <div className="col-md-3" key={index}>
-                       <Car car={car} color={index % 2 ? 'danger' : ''} />
+                       <Car car={car} carIndex={index} modifyCar={modifyCar} />
                     </div> 
                 })}
             </div>
-           
         </div> 
     );
 
