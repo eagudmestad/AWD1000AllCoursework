@@ -104,6 +104,13 @@ function Seed() {
         saveCars(newAllCars);
     }
 
+    function deleteCar(carIndex){
+        const newAllCars = allCars.filter((car,index) => index !== carIndex);
+        setAllCars(newAllCars);
+        setSearchResults(newAllCars);
+        saveCars(newAllCars);
+    }
+
    
 
     //local storage save
@@ -181,7 +188,7 @@ function Seed() {
                         <select value={year} className='form-select' onChange={evt => setYear(evt.currentTarget.value)}>
                             <option value="">Select Year</option>
                            {/* {allCars && allCars.map((car,index) => <option key={index} value={car.year}>{car.year}</option>)} */}
-                           {_(allCars).map(car => car.year).sort().uniq().map(year => <option key={year} value={year}>{year}</option>).value()}
+                           {_(allCars).map(car => car.year).sort().uniq().map(year => <option key={`${year} ${make} ${model}`} value={year}>{year}</option>).value()}
                         </select>
                     </div>
                 </div>
@@ -194,7 +201,7 @@ function Seed() {
                 {!allCars && <button className="btn btn-lg btn-warning" onClick={resetCars}>Save Seed Data to Local Storage</button>}
                 {searchResults && searchResults.map((car, index) => {
                     return <div className="col-md-3" key={index}>
-                       <Car car={car} carIndex={index} modifyCar={modifyCar} />
+                       <Car car={car} carIndex={index} modifyCar={modifyCar} deleteCar={deleteCar} />
                     </div> 
                 })}
             </div>

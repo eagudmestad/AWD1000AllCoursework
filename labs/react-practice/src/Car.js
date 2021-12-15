@@ -48,6 +48,10 @@ function Car(props){
         setEditMode(false);
     }
 
+    function onDelete(){
+        props.deleteCar(props.carIndex);
+    }
+
  return(
     <div className={cardClasses}>
     <img src="https://via.placeholder.com/150" className="card-img-top" alt="..."></img>
@@ -55,7 +59,7 @@ function Car(props){
         <h2 className="card-title">{props.car.make}</h2>
          <p>{props.car.model} {props.car.year} </p>
          <button type="button" onClick={onEdit} className="btn btn-sm btn-secondary">Edit</button>
-         
+         <button type="button" onClick={onDelete} className="btn btn-sm btn-danger">Delete</button>
     </div>}
     {editMode && 
     <form>
