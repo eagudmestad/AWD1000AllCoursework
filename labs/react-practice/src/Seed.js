@@ -4,6 +4,7 @@ import React, {
 import AddCar from './AddCar';
 import Car from './Car';
 import _ from 'lodash';
+import {nanoid} from "nanoid";
 
 function Seed() {
 
@@ -28,51 +29,61 @@ function Seed() {
     function resetCars() {
         //Save the seed car data to local storage
         const seedCarData = [{
+            id:nanoid(),
             "make": "Nissan",
             "model": "Sentra",
             "year": 1992,
             "color": "red",
         }, {
+            id:nanoid(),
             "make": "Toyota",
             "model": "Celica",
             "year": 1983,
             "color": "green",
         }, {
+            id:nanoid(),
             "make": "Mitsubishi",
             "model": "Mirage",
             "year": 1994,
             "color": "red",
         }, {
+            id:nanoid(),
             "make": "Volvo",
             "model": "V90",
             "year": 1997,
             "color": "green",
         }, {
+            id:nanoid(),
             "make": "GMC",
             "model": "Envoy XUV",
             "year": 2005,
             "color": "blue",
         }, {
+            id:nanoid(),
             "make": "Dodge",
             "model": "Ram 1500",
             "year": 2000,
             "color": "black",
         }, {
+            id:nanoid(),
             "make": "Dodge",
             "model": "Ram 2500",
             "year": 1997,
             "color": "blue",
         }, {
+            id:nanoid(),
             "make": "Ford",
             "model": "E-Series",
             "year": 1987,
             "color": "black",
         }, {
+            id:nanoid(),
             "make": "Subaru",
             "model": "Alcyone SVX",
             "year": 1995,
             "color": "blue",
         }, {
+            id:nanoid(),
             "make": "Toyota",
             "model": "Yaris",
             "year": 2012,
